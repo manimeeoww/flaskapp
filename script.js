@@ -3,6 +3,7 @@
 console.log('script.js loaded');
 
 async function getPrediction() {
+    console.log('getPrediction function is called');
     document.getElementById('result').innerText = 'Function is working!';
     const fileInput = document.getElementById('file-input');
     const predictionResult = document.getElementById('prediction-result');
