@@ -22,7 +22,7 @@ async function getPrediction() {
     predictionResult.innerText = 'Processing... Please wait.';
 
     try {
-        const response = await fetch('https://petalpedia-ai.vercel.app/predict', {
+        const response = await fetch('http://localhost:3000/predict', {
             method: 'POST',
             body: formData,
             mode: 'cors',
