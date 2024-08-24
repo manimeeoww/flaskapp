@@ -1,0 +1,24 @@
+{
+  "name": "petal-pedia",
+  "version": "1.0.0",
+  "description": "Flower classification app using Next.js and Flask",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "13.4.6",
+    "react": "18.3.0",
+    "react-dom": "18.3.0"
+  },
+  "keywords": [
+    "flower",
+    "classification",
+    "Next.js",
+    "Flask"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
