@@ -1,5 +1,7 @@
 // script.js
 
+console.log('script.js loaded');
+
 async function getPrediction() {
     const fileInput = document.getElementById('file-input');
     const predictionResult = document.getElementById('prediction-result');
