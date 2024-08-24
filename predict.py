@@ -4,7 +4,8 @@ from flask_cors import CORS
 import numpy as np
 import tensorflow as tf
 from PIL import Image
-
+from dotenv import load_dotenv
+load_dotenv()
 app = Flask(__name__)
 
 # Load environment variables
