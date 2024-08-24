@@ -29,7 +29,70 @@ categories = {
         'link':  'https://en.wikipedia.org/wiki/Chrysanthemum',
         'image': 'https://i.pinimg.com/564x/20/63/25/206325bae5f105956f255845eb42bbcc.jpg'
     },
-    # Add more flower details as needed
+    'French Marigold': {
+        'scientific_name': 'Tagetes patula',
+        'origin': 'Native to Mexico and Central America',
+        'family': 'Asteraceae (Compositae)',
+        'symbolism': 'Symbolizes passion and creativity. It\'s also associated with positive energy and good fortune.',
+        'link':  'https://en.wikipedia.org/wiki/Tagetes',
+        'image': 'https://i.pinimg.com/564x/20/63/25/206325bae5f105956f255845eb42bbcc.jpg'
+    },
+    'Lavender': {
+        'scientific_name': 'Lavandula spp. (Various species)',
+        'origin': 'Native to the Mediterranean region, Africa, and India',
+        'family': 'Lamiaceae (mint family)',
+        'symbolism': 'Represents calmness, serenity, and grace. It\'s often associated with cleanliness and relaxation.',
+        'link':  'https://en.wikipedia.org/wiki/Lavender',
+        'image': 'https://i.pinimg.com/564x/20/63/25/206325bae5f105956f255845eb42bbcc.jpg'
+    },
+    'Lotus': {
+        'scientific_name': 'Nelumbo nucifera',
+        'origin': 'Native to Asia and Australia',
+        'family': 'Nelumbonaceae',
+        'symbolism': 'Represents purity, enlightenment, and rebirth in various cultures, particularly in Asian religions like Buddhism and Hinduism.',
+        'link':  'https://en.wikipedia.org/wiki/Nelumbo_nucifera',
+        'image': 'https://i.pinimg.com/564x/54/1f/e7/541fe7d7d8a5f3db275336ae7894dc17.jpg'
+    },
+    'Passion Flower': {
+        'scientific_name': 'Passiflora spp. (Various species)',
+        'origin': 'Native to tropical and subtropical regions of the Americas',
+        'family': 'Passiflorine (passionflower family)',
+        'symbolism': 'Represents faith, passion, and spirituality. The intricate structure of its flower is often seen as a symbol of the Passion of Christ.',
+        'link':  'https://en.wikipedia.org/wiki/Passiflora',
+        'image': 'https://i.pinimg.com/564x/eb/bb/9d/ebbb9d014988fc6e8f6990c959b0761f.jpg'
+    },
+    'Poppy': {
+        'scientific_name': 'Eschscholzia californica',
+        'origin': 'Native to California, USA, and adjacent areas of Mexico',
+        'family': 'Papaveraceae (poppy family)',
+        'symbolism': 'Represents imagination, success, and remembrance. It\'s also associated with relaxation and restful sleep.',
+        'link':  'https://en.wikipedia.org/wiki/Eschscholzia_californica',
+        'image': 'https://i.pinimg.com/564x/7b/94/aa/7b94aa41ccccba116748f8e58aa24e2c.jpg'
+    },
+    'Purple coneflower': {
+        'scientific_name': 'Echinacea purpurea',
+        'origin': 'Native to eastern and central North America',
+        'family': 'Asteraceae (Compositae)',
+        'symbolism': 'Known for its medicinal properties and immune-boosting benefits. Represents strength, health, and healing.',
+        'link':  'https://en.wikipedia.org/wiki/Echinacea',
+        'image': 'https://i.pinimg.com/564x/84/28/b6/8428b6a28d45bd3467326c94d7953a7c.jpg'
+    },
+    'Rose': {
+        'scientific_name': 'Rosa spp. (Various species)',
+        'origin': 'Roses are native to various world regions, depending on the species.',
+        'family': 'Rosaceae',
+        'symbolism': 'Roses have numerous meanings depending on color and context. Generally, they symbolize love, beauty, and passion.',
+        'link': 'https://en.wikipedia.org/wiki/Rose',
+        'image': 'https://i.pinimg.com/564x/a1/68/cf/a168cfe922bf440d68dea91b80bc62ed.jpg'
+    },
+    'Sunflower': {
+        'scientific_name': 'Helianthus annuus',
+        'origin': 'Native to North America',
+        'family': 'Asteraceae (Compositae)',
+        'symbolism': 'Represents adoration, loyalty, and longevity. The sunflower\'s vibrant yellow color symbolizes vitality and happiness.',
+        'link': 'https://en.wikipedia.org/wiki/Common_sunflower',
+        'image': 'https://i.pinimg.com/564x/fa/33/cc/fa33ccdefc6f4c5c696d6af334cfc5a5.jpg'
+    }
 }
 
 @app.route('/predict', methods=['POST'])
