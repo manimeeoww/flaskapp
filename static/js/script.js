@@ -5,6 +5,9 @@ async function getPrediction() {
     const predictionResult = document.getElementById('prediction-result');
     const flowerInfoDiv = document.getElementById('flower-info');
     const formData = new FormData();
+    const cors = require('cors');
+
+    predict.use(cors());
 
     // Clear previous results
     predictionResult.innerText = '';
