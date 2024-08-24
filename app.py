@@ -11,7 +11,7 @@ import logging
 app = Flask(__name__)
 
 # Allow requests from your Netlify domain
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "https://petalpedia-ai-manimeeowws-projects.vercel.app/"}})
 
 # Load the model
 model = tf.keras.models.load_model('mymodel.h5')
