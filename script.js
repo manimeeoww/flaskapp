@@ -3,6 +3,7 @@
 console.log('script.js loaded');
 
 async function getPrediction() {
+    document.getElementById('result').innerText = 'Function is working!';
     const fileInput = document.getElementById('file-input');
     const predictionResult = document.getElementById('prediction-result');
     const flowerInfoDiv = document.getElementById('flower-info');
