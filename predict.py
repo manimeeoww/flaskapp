@@ -132,5 +132,13 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+# Add CORS headers to all responses
+@app.after_request
+def add_cors_headers(response):
+    response.headers['Access-Control-Allow-Origin'] = 'https://petalpedia-ai-manimeeowws-projects.vercel.app'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
+    return response
+
 if __name__ == "__main__":
     app.run()
