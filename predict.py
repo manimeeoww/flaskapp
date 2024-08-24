@@ -6,7 +6,7 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Adjust this for your specific domain
+CORS(app, resources={r"/*": {"origins": "https://petalpedia-ai-manimeeowws-projects.vercel.app/"}})  # Adjust this for your specific domain
 
 # Load the model
 model = tf.keras.models.load_model('mymodel.h5')
