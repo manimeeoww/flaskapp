@@ -24,7 +24,11 @@ async function getPrediction() {
     try {
         const response = await fetch('https://petalpedia-ai.vercel.app/predict', {
             method: 'POST',
-            body: formData
+            body: formData,
+            mode: 'cors',
+            headers: {
+                'Accept': 'application/json' // Explicitly set Accept header for JSON response
+                }
         });
 
         if (response.ok) {
