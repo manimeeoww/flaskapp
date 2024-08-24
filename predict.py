@@ -1,12 +1,16 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import numpy as np
 import tensorflow as tf
 from PIL import Image
-import io
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://petalpedia-erwgjcf9w-manimeeowws-projects.vercel.app"}})  # Adjust this for your specific domain
+
+# Load environment variables
+CORS_ORIGIN = os.getenv('CORS_ORIGIN', '*')  # Default to '*' for development
+
+CORS(app, resources={r"/*": {"origins": CORS_ORIGIN}})
 
 # Load the model
 model = tf.keras.models.load_model('mymodel.h5')
@@ -135,7 +139,7 @@ def predict():
 # Add CORS headers to all responses
 @app.after_request
 def add_cors_headers(response):
-    response.headers['Access-Control-Allow-Origin'] = 'https://petalpedia-ai-manimeeowws-projects.vercel.app'
+    response.headers['Access-Control-Allow-Origin'] = CORS_ORIGIN
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
     return response
