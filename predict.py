@@ -100,24 +100,30 @@ categories = {
     }
 }
 
-@app.route('/predict', methods=['POST'])
 def predict():
     try:
+        # Check if a file is part of the request
         if 'file' not in request.files:
-            return jsonify({'error': 'No file part'}), 400
+            return jsonify({'error': 'No file part in the request'}), 400
 
         file = request.files['file']
         if file.filename == '':
-            return jsonify({'error': 'No selected file'}), 400
+            return jsonify({'error': 'No file selected for uploading'}), 400
 
         # Process the image
-        img = Image.open(file.stream).resize((224, 224))  # Adjust to your model's input size
-        img_array = np.array(img) / 255.0  # Normalize
-        img_array = np.expand_dims(img_array, axis=0)
+        try:
+            img = Image.open(file.stream).resize((224, 224))  # Adjust to your model's input size
+            img_array = np.array(img) / 255.0  # Normalize
+            img_array = np.expand_dims(img_array, axis=0)
+        except Exception as img_error:
+            return jsonify({'error': f'Image processing error: {str(img_error)}'}), 400
 
         # Make prediction
-        predictions = model.predict(img_array)
-        predicted_class = np.argmax(predictions, axis=1)[0]
+        try:
+            predictions = model.predict(img_array)
+            predicted_class = np.argmax(predictions, axis=1)[0]
+        except Exception as model_error:
+            return jsonify({'error': f'Model prediction error: {str(model_error)}'}), 500
 
         # Map prediction to flower category
         flower_name = list(categories.keys())[predicted_class]
@@ -126,13 +132,13 @@ def predict():
         # Return prediction and flower details
         return jsonify({
             'prediction': flower_name,
-            'scientific_name': flower_info['scientific_name'],
-            'origin': flower_info['origin'],
-            'family': flower_info['family'],
-            'symbolism': flower_info['symbolism'],
-            'link': flower_info['link'],
-            'image': flower_info['image']
-        })
+            'scientific_name': flower_info.get('scientific_name', 'N/A'),
+            'origin': flower_info.get('origin', 'N/A'),
+            'family': flower_info.get('family', 'N/A'),
+            'symbolism': flower_info.get('symbolism', 'N/A'),
+            'link': flower_info.get('link', ''),
+            'image': flower_info.get('image', '')
+        }), 200
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -146,4 +152,4 @@ def add_cors_headers(response):
     return response
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
