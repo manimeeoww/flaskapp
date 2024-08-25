@@ -5,6 +5,10 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 from dotenv import load_dotenv
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
 load_dotenv()
 app = Flask(__name__)
 
@@ -100,9 +104,9 @@ categories = {
     }
 }
 
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
-        # Check if a file is part of the request
         if 'file' not in request.files:
             return jsonify({'error': 'No file part in the request'}), 400
 
@@ -110,26 +114,22 @@ def predict():
         if file.filename == '':
             return jsonify({'error': 'No file selected for uploading'}), 400
 
-        # Process the image
-        try:
-            img = Image.open(file.stream).resize((224, 224))  # Adjust to your model's input size
-            img_array = np.array(img) / 255.0  # Normalize
-            img_array = np.expand_dims(img_array, axis=0)
-        except Exception as img_error:
-            return jsonify({'error': f'Image processing error: {str(img_error)}'}), 400
+        img = Image.open(file.stream).resize((224, 224))
+        img_array = np.array(img) / 255.0
+        img_array = np.expand_dims(img_array, axis=0)
 
-        # Make prediction
-        try:
-            predictions = model.predict(img_array)
-            predicted_class = np.argmax(predictions, axis=1)[0]
-        except Exception as model_error:
-            return jsonify({'error': f'Model prediction error: {str(model_error)}'}), 500
+        predictions = model.predict(img_array)
+        predicted_class = np.argmax(predictions, axis=1)[0]
 
-        # Map prediction to flower category
+        logging.debug(f'Predicted class: {predicted_class}')
+        logging.debug(f'Total categories: {len(categories)}')
+
+        if predicted_class >= len(categories):
+            return jsonify({'error': 'Predicted class index out of range'}), 500
+
         flower_name = list(categories.keys())[predicted_class]
         flower_info = categories.get(flower_name, {})
 
-        # Return prediction and flower details
         return jsonify({
             'prediction': flower_name,
             'scientific_name': flower_info.get('scientific_name', 'N/A'),
@@ -141,8 +141,9 @@ def predict():
         }), 200
 
     except Exception as e:
+        logging.error(f'Error in prediction: {str(e)}')
         return jsonify({'error': str(e)}), 500
-
+        
 # Add CORS headers to all responses
 @app.after_request
 def add_cors_headers(response):
