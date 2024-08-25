@@ -8,7 +8,7 @@ const fs = require('fs');
 const { exec } = require('child_process');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors()); // Enable CORS for all origins (adjust as needed)
