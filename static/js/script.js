@@ -53,8 +53,8 @@ async function getPrediction() {
             predictionResult.innerText = 'Error: ' + (error.error || 'Unknown error occurred.');
         }
     } catch (error) {
-        predictionResult.innerText = 'Error: Unable to reach the server. Please try again later.';
-        console.error('Fetch error:', error); // Log error details to the console
+        alert(`Fetch error: ${error.message}`);
+        console.error('Fetch error:', error);
     }
 }
 
