@@ -22,7 +22,7 @@ async function getPrediction() {
     predictionResult.innerText = 'Processing... Please wait.';
 
     try {
-        const response = await fetch('http://localhost:3000/predict', {
+        const response = await fetch('http://localhost:5000/predict', {
             method: 'POST',
             body: formData,
             mode: 'cors',
