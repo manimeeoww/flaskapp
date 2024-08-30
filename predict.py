@@ -9,11 +9,8 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-load_dotenv()
-app = Flask(__name__)
 
-# Load environment variables
-CORS_ORIGIN = os.getenv('CORS_ORIGIN', '*')  # Default to '*' for development
+app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": CORS_ORIGIN}})
 
