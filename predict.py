@@ -44,7 +44,7 @@ categories = {
         'family': 'Asteraceae (Compositae)',
         'symbolism': 'Symbolizes passion and creativity. It\'s also associated with positive energy and good fortune.',
         'link':  'https://en.wikipedia.org/wiki/Tagetes',
-        'image': 'https://i.pinimg.com/564x/20/63/25/206325bae5f105956f255845eb42bbcc.jpg'
+        'image': 'https://i.pinimg.com/564x/54/1f/e7/541fe7d7d8a5f3db275336ae7894dc17.jpg'
     },
     'Lavender': {
         'scientific_name': 'Lavandula spp. (Various species)',
@@ -52,7 +52,7 @@ categories = {
         'family': 'Lamiaceae (mint family)',
         'symbolism': 'Represents calmness, serenity, and grace. It\'s often associated with cleanliness and relaxation.',
         'link':  'https://en.wikipedia.org/wiki/Lavender',
-        'image': 'https://i.pinimg.com/564x/20/63/25/206325bae5f105956f255845eb42bbcc.jpg'
+        'image': 'https://i.pinimg.com/564x/b8/1d/43/b81d431f9a1ba4859151b510c4adfd72.jpg'
     },
     'Lotus': {
         'scientific_name': 'Nelumbo nucifera',
@@ -60,7 +60,7 @@ categories = {
         'family': 'Nelumbonaceae',
         'symbolism': 'Represents purity, enlightenment, and rebirth in various cultures, particularly in Asian religions like Buddhism and Hinduism.',
         'link':  'https://en.wikipedia.org/wiki/Nelumbo_nucifera',
-        'image': 'https://i.pinimg.com/564x/54/1f/e7/541fe7d7d8a5f3db275336ae7894dc17.jpg'
+        'image': 'https://i.pinimg.com/564x/9c/60/6b/9c606b1308603df7e7de45c56dcaef6c.jpg'
     },
     'Passion Flower': {
         'scientific_name': 'Passiflora spp. (Various species)',
@@ -68,7 +68,7 @@ categories = {
         'family': 'Passiflorine (passionflower family)',
         'symbolism': 'Represents faith, passion, and spirituality. The intricate structure of its flower is often seen as a symbol of the Passion of Christ.',
         'link':  'https://en.wikipedia.org/wiki/Passiflora',
-        'image': 'https://i.pinimg.com/564x/eb/bb/9d/ebbb9d014988fc6e8f6990c959b0761f.jpg'
+        'image': 'https://i.pinimg.com/564x/9d/ec/97/9dec97f84dbdb1f6eb7edf79f247abec.jpg'
     },
     'Poppy': {
         'scientific_name': 'Eschscholzia californica',
@@ -76,7 +76,7 @@ categories = {
         'family': 'Papaveraceae (poppy family)',
         'symbolism': 'Represents imagination, success, and remembrance. It\'s also associated with relaxation and restful sleep.',
         'link':  'https://en.wikipedia.org/wiki/Eschscholzia_californica',
-        'image': 'https://i.pinimg.com/564x/7b/94/aa/7b94aa41ccccba116748f8e58aa24e2c.jpg'
+        'image': 'https://i.pinimg.com/564x/d9/07/a8/d907a83fdf5e5248f32951973065ca6b.jpg'
     },
     'Purple coneflower': {
         'scientific_name': 'Echinacea purpurea',
@@ -84,7 +84,7 @@ categories = {
         'family': 'Asteraceae (Compositae)',
         'symbolism': 'Known for its medicinal properties and immune-boosting benefits. Represents strength, health, and healing.',
         'link':  'https://en.wikipedia.org/wiki/Echinacea',
-        'image': 'https://i.pinimg.com/564x/84/28/b6/8428b6a28d45bd3467326c94d7953a7c.jpg'
+        'image': 'https://i.pinimg.com/564x/12/9d/0d/129d0d619d02c62aaa7b1f5dc24ebad6.jpg'
     },
     'Rose': {
         'scientific_name': 'Rosa spp. (Various species)',
@@ -92,7 +92,7 @@ categories = {
         'family': 'Rosaceae',
         'symbolism': 'Roses have numerous meanings depending on color and context. Generally, they symbolize love, beauty, and passion.',
         'link': 'https://en.wikipedia.org/wiki/Rose',
-        'image': 'https://i.pinimg.com/564x/a1/68/cf/a168cfe922bf440d68dea91b80bc62ed.jpg'
+        'image': 'https://i.pinimg.com/736x/45/52/73/45527396d88c20076864d2da0a9a84d5.jpg'
     },
     'Sunflower': {
         'scientific_name': 'Helianthus annuus',
@@ -100,7 +100,7 @@ categories = {
         'family': 'Asteraceae (Compositae)',
         'symbolism': 'Represents adoration, loyalty, and longevity. The sunflower\'s vibrant yellow color symbolizes vitality and happiness.',
         'link': 'https://en.wikipedia.org/wiki/Common_sunflower',
-        'image': 'https://i.pinimg.com/564x/fa/33/cc/fa33ccdefc6f4c5c696d6af334cfc5a5.jpg'
+        'image': 'https://i.pinimg.com/564x/c1/bd/9e/c1bd9eb5b0334800520a78b57d543935.jpg'
     }
 }
 
