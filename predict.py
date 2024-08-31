@@ -57,7 +57,7 @@ categories = {
         'family': 'Nelumbonaceae',
         'symbolism': 'Represents purity, enlightenment, and rebirth in various cultures, particularly in Asian religions like Buddhism and Hinduism.',
         'link':  'https://en.wikipedia.org/wiki/Nelumbo_nucifera',
-        'image': 'https://i.pinimg.com/564x/9c/60/6b/9c606b1308603df7e7de45c56dcaef6c.jpg'
+        'image': 'https://i.pinimg.com/564x/3e/22/04/3e220427f4b5876085370d5620d99883.jpg'
     },
     'Passion Flower': {
         'scientific_name': 'Passiflora spp. (Various species)',
