@@ -1,92 +1,109 @@
-/* Basic grid container for section */
-#main-section {
-    position: relative;
-    display: grid;
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#upload-form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    grid-template-columns: auto 100rem auto;
-    overflow: hidden;
-    z-index: 0;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Background container */
-.background-container {
-    grid-area: 1 / 1 / 2 / 4;
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    z-index: 0;
+#file-input {
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
-.background-image {
-    width: 100%;
-    height: 100%;
-    opacity: 0.67;
-    background-size: cover;
-    background-position: center;
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Text container styling */
-.text-container {
-    display: grid;
-    position: relative;
-    grid-area: 1 / 2 / 2 / 3;
-    z-index: 5;
+button:hover {
+    background-color: #45a049;
+}
+
+#prediction-result {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+    color: #333;
+}
+
+.flower-info {
+    margin-top: 30px;
     text-align: center;
 }
 
-/* Headline styling */
-.headline {
-    font-family: 'YourChosenFont', sans-serif;
-    color: #156669;
-    font-weight: 700;
-    line-height: 1.2em;
-    font-size: 2rem;
-    text-transform: uppercase;
+.flower-info img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Subheading styling */
-.subheading {
-    font-family: 'YourChosenFont', sans-serif;
-    color: #156669;
-    line-height: 1.5em;
-    font-size: 1.5rem;
+.flower-info h2 {
+    color: #4CAF50;
+    margin-top: 15px;
+    font-size: 24px;
 }
 
-/* Additional text styling */
-.additional-text {
-    font-family: 'YourChosenFont', sans-serif;
-    color: #156669;
-    font-size: 1rem;
-    line-height: 1.2em;
-    letter-spacing: -0.04em;
+.flower-info p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
 }
 
-/* Circular image styling */
-.circular-image {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
 
-/* Add a background color block */
-.color-block {
-    width: 100%;
-    height: 100%;
-    background-color: #f0cdff;
-    z-index: 2;
-}
+    h1 {
+        font-size: 2rem;
+    }
 
-/* Box container styling for elements */
-.box-container {
-    padding: 20px;
-    background-color: #eeecde;
-    opacity: 1;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 6;
+    #upload-form {
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .flower-info h2 {
+        font-size: 22px;
+    }
+
+    .flower-info p {
+        font-size: 16px;
+    }
 }
