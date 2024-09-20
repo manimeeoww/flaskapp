@@ -1,7 +1,10 @@
+/* Import Roca One from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roca+One&display=swap');
+
 /* styles.css */
 
 body {
-    font-family: 'Comic Sans MS', Arial, sans-serif;
+    font-family: 'Roca One', Arial, sans-serif;
     background-color: #FFFBF2;
     color: #555;
     margin: 0;
@@ -13,6 +16,7 @@ h1 {
     color: #FFB6C1;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    font-family: 'Roca One', sans-serif;
     animation: typewriter 3s steps(30, end) forwards;
     white-space: nowrap;
     overflow: hidden;
@@ -56,6 +60,7 @@ button {
     font-size: 18px;
     border-radius: 10px;
     transition: all 0.3s ease;
+    font-family: 'Roca One', sans-serif;
 }
 
 button:hover {
@@ -94,6 +99,7 @@ button:hover {
     color: #FFA07A;
     margin-top: 15px;
     font-size: 26px;
+    font-family: 'Roca One', sans-serif;
     animation: typewriter 3s steps(30, end) forwards;
     white-space: nowrap;
     overflow: hidden;
@@ -104,6 +110,7 @@ button:hover {
     font-size: 18px;
     color: #888;
     margin-top: 10px;
+    font-family: 'Roca One', sans-serif;
 }
 
 /* Learn More Button */
@@ -117,6 +124,7 @@ button:hover {
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Roca One', sans-serif;
 }
 
 .learn-more:hover {
@@ -149,5 +157,62 @@ button:hover {
 
     .flower-info p {
         font-size: 16px;
+    }
+}
+/* styles.css */
+
+/* Existing styles remain the same above this */
+
+/* Flower Info Layout */
+.flower-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse; /* Image on the right, text on the left */
+    margin-top: 30px;
+    text-align: left; /* Align text to the left */
+    gap: 20px; /* Space between the image and text */
+}
+
+.flower-info img {
+    max-width: 50%; /* Adjust image width as needed */
+    height: auto;
+    border: 3px solid #FFD700;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flower-info h2 {
+    color: #FFA07A;
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-family: 'Roca One', sans-serif;
+    animation: typewriter 3s steps(30, end) forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #4CAF50;
+}
+
+.flower-info p {
+    font-size: 18px;
+    color: #888;
+    margin-top: 10px;
+    font-family: 'Roca One', sans-serif;
+    max-width: 45%; /* Limit width of text */
+}
+
+/* For smaller screens, stack image and text vertically */
+@media screen and (max-width: 768px) {
+    .flower-info {
+        flex-direction: column; /* Stack items */
+        text-align: center;
+    }
+
+    .flower-info img {
+        max-width: 100%; /* Image takes full width */
+    }
+
+    .flower-info h2, .flower-info p {
+        max-width: 100%; /* Text takes full width */
     }
 }
