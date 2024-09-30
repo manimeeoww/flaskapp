@@ -4,39 +4,12 @@
     {
       "src": "app.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "static/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "pages/**/*.js",
-      "use": "@vercel/next"
-    },
-    {
-      "src": "api/predict.py",
-      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/predict",
-      "dest": "api/predict.py"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "app.py"
     }
-  ],
-  "env": {
-    "PYTHON_VERSION": "3.10"
-  }
+  ]
 }
